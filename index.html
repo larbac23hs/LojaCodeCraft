@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loja CodeCraft</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Buscar produtos...">
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>Categorias</h3>
+                    <div class="category-filter" id="category-filters">
+                        <!-- Categorias serão preenchidas via JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Faixa de Preço</h3>
+                    <div class="price-filter" id="price-filters">
+                        <label>
+                            <input type="radio" name="price-range" value="all" checked> Todos
+                        </label>
+                        <label>
+                            <input type="radio" name="price-range" value="0-50"> Até R$50
+                        </label>
+                        <label>
+                            <input type="radio" name="price-range" value="50-100"> R$50 - R$100
+                        </label>
+                        <label>
+                            <input type="radio" name="price-range" value="100-200"> R$100 - R$200
+                        </label>
+                        <label>
+                            <input type="radio" name="price-range" value="200-500"> R$200 - R$500
+                        </label>
+                        <label>
+                            <input type="radio" name="price-range" value="500+"> Acima de R$500
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="products-grid" id="products-container">
+            <!-- Produtos serão preenchidos via JavaScript -->
+        </div>
+    </div>
+    
+    <button class="cart-button" id="cart-button">
+        🛒
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+    
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Seu Carrinho</h2>
+                <button class="close-button" id="close-modal">&times;</button>
+                <div class="cart-actions">
+    <button id="finalizar-compra" class="checkout-button">Finalizar Compra</button>
+            </div>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <!-- Itens do carrinho serão preenchidos via JavaScript -->
+                <div class="no-products">Seu carrinho está vazio</div>
+            </div>
+            
+            <div class="cart-total" id="cart-total">
+                Total: R$0.00
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

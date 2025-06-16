@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pagamento.css">
+</head>
+<body>
+    <header>
+        <h1>Finalizar Compra</h1>
+    </header>
+
+    <div class="container">
+        <div class="checkout-container">
+            <div class="order-summary">
+                <h2>Resumo do Pedido</h2>
+                <div id="order-items">
+                    <!-- Itens serão preenchidos via JavaScript -->
+                </div>
+                <div class="order-total">
+                    <span>Total:</span>
+                    <span id="order-total-amount">R$0.00</span>
+                </div>
+            </div>
+            
+            <div class="payment-form">
+                <h2>Informações de Pagamento</h2>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cartao">Número do Cartão</label>
+                        <input type="text" id="cartao" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="validade">Validade</label>
+                            <input type="text" id="validade" placeholder="MM/AA" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="checkout-button">Confirmar Pagamento</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="pagamento.js"></script>
+</body>
+</html>
